@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.cwind</groupId>
-  <artifactId>FileMonitor</artifactId>
+  <artifactId>JavaCollections</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>FileMonitor</name>
+  <name>JavaCollections</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -23,7 +23,7 @@
   </dependencies>
 
 	<build>
-		<finalName>FileMonitor</finalName>
+		<finalName>JavaCollections</finalName>
 		<pluginManagement>
 			<plugins>
 				<plugin>
