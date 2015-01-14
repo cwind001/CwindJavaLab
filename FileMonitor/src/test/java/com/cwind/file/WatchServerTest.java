@@ -18,8 +18,11 @@ public class WatchServerTest {
 		final Path path = FileSystems.getDefault().getPath(absolutePath);
 		System.out.println(path);
 		final WatchKey watchKey = path.register(watchService, StandardWatchEventKinds.ENTRY_MODIFY);
-		while (true) {
-		    final WatchKey wk = watchService.take();
+		boolean fileNotChanged = true;
+		int count = 0;
+		while (fileNotChanged) {
+			final WatchKey wk = watchService.take();
+		    System.out.println("Loop count: " + count);
 		    for (WatchEvent<?> event : wk.pollEvents()) {
 		        //we only register "ENTRY_MODIFY" so the context is always a Path.
 		        final Path changed = (Path) event.context();
@@ -33,6 +36,7 @@ public class WatchServerTest {
 		    if (!valid) {
 		        System.out.println("Key has been unregisterede");
 		    }
+		    count++;
 		}
 	}
 }
