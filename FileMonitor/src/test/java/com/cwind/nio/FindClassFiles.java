@@ -10,7 +10,7 @@ import java.nio.file.attribute.BasicFileAttributes;
 
 public class FindClassFiles {
 	public static void main(String[] args) throws IOException {
-		Path dir = Paths.get("E:\\SourceCodes\\GitHub\\BillyChen\\CwindJavaLab\\FileMonitor");
+		Path dir = Paths.get(".");
 		Files.walkFileTree(dir, new FindClassVisitor());
 	}
 	

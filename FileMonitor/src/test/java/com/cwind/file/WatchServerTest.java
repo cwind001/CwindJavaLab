@@ -21,7 +21,6 @@ public class WatchServerTest {
 			final WatchKey wk = watchService.take();
 		    System.out.println("Loop count: " + count);
 		    for (WatchEvent<?> event : wk.pollEvents()) {
-		        //we only register "ENTRY_MODIFY" so the context is always a Path.
 		        final Path changed = (Path) event.context();
 		        System.out.println(changed + ", " + event.kind());
 		        if (changed.endsWith("sample1.txt")) {

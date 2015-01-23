@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 
 public class TWRReadWriteFiles {
 	public static void main(String[] args) { 
-		Path file = Paths.get("E:\\SourceCodes\\GitHub\\BillyChen\\CwindJavaLab\\FileMonitor\\src\\test\\java\\com\\cwind\\nio\\TWRReadWriteFiles.java");
+		Path file = Paths.get(".\\src\\test\\java\\com\\cwind\\nio\\TWRReadWriteFiles.java");
 		try(BufferedReader reader = Files.newBufferedReader(file)){
 			String line;
 			while ((line = reader.readLine()) != null) {

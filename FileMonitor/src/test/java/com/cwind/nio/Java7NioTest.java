@@ -5,7 +5,7 @@ import java.nio.file.Paths;
 
 public class Java7NioTest {
 	public static void main(String[] args) {
-		Path currentPath = Paths.get("E:\\SourceCodes\\GitHub\\BillyChen\\CwindJavaLab\\FileMonitor");
+		Path currentPath = Paths.get(".\\src");
 		System.out.println("File Name [" + currentPath.getFileName() + "]");
 		System.out.println("Number of Name Elements in the Path [" + currentPath.getNameCount() + "]");
 		System.out.println("Parent Path [" + currentPath.getParent() + "]");
