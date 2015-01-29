@@ -7,8 +7,8 @@ public class CollectionSortTest {
 	public static void main(String[] args){
 		System.out.println("****Collection Sort Test****");
 		ArrayList<String> al = new ArrayList<String>();
-		al.add("Elaine");
-		al.add("Alan");
+		al.add("Billy");
+		al.add("Lily");
 		al.add("Billy");
 		
 		for(String str : al){
