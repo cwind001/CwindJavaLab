@@ -9,7 +9,7 @@ import au.com.bytecode.opencsv.CSVReader;
 
 public class ReadCSVDemo {
 	public static void main(String[] args) throws IOException {
-		String csvPath = "D://LunaWorkspace//POITest//CSVTest.csv";
+		String csvPath = "CSVTest.csv";
 		
 		InputStream csv = new FileInputStream(csvPath);
 		//Read the byte order mark.

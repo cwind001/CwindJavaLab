@@ -20,8 +20,8 @@ import au.com.bytecode.opencsv.CSVWriter;
 public class OpenCSVDemo {
 	public static void main(String[] args){
 		try {
-			String xlsPath = "D://LunaWorkspace//POITest//RunningMan.xlsx";
-			String csvPath = "D://LunaWorkspace//POITest//CSVTest.csv";
+			String xlsPath = "RunningMan.xlsx";
+			String csvPath = "CSVTest.csv";
 			
 			OutputStream csv = new FileOutputStream(csvPath);
 			//Write the byte order mark.

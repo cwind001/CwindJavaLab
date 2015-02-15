@@ -14,7 +14,7 @@ public class SimpleDatasheetReader {
 
 	public static void main(String[] args){
 		try {
-	        File excel = new File("D://LunaWorkspace//POITest//RunningMan3.xlsx");
+	        File excel = new File("RunningMan.xlsx");
 	        FileInputStream fis = new FileInputStream(excel);
 	        XSSFWorkbook book = new XSSFWorkbook(fis);
 	        XSSFSheet sheet = book.getSheetAt(0);
