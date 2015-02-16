@@ -22,9 +22,8 @@ public class ReadCSVDemo {
 		CSVReader csvReader = new CSVReader(inputStreamReader);
 		String[] row = null;
 		while((row = csvReader.readNext()) != null) {
-		    System.out.println(row[0]
-		              + " # " + row[1]
-		              + " #  " + row[2]);
+		    System.out.println(row[0] + " # " + row[1] + " #  " + row[2] + " #  " + row[3]
+		    		+ " #  " + row[4] + " #  " + row[5]);
 		}
 		csvReader.close();
 	}

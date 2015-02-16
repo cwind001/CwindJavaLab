@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.cwind.poi;
+package com.cwind.poi.demo;
 
 import org.apache.poi.xssf.usermodel.*;
 import org.apache.poi.ss.usermodel.*;

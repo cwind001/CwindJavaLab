@@ -13,18 +13,18 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 /**
  * @author Billy Chen
  */
-public class SimpleDatasheetTest {
+public class SimpleDatasheetWriter {
 
     private static final String[] titles = {
             "姓名", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
 
     //sample data to fill the sheet.
     private static final String[][] data = {
-            {"Elaine", "跑了", "跑了", "跑了", null, null},
-            {"Billy", "跑了", "跑了", "没跑", null, null },
-            {"Bob", "没跑", "没跑", "没跑", null, null },
-            {"Alan", "跑了", "跑了", "跑了", null, null },
-            {"Ledong", "跑了", "跑了", "跑了", null, null }
+            {"AngelaBaby", "跑了", "跑了", "跑了", "跑了", "跑了"},
+            {"邓超", "跑了", "跑了", "没跑", "跑了", "跑了" },
+            {"王祖蓝", "没跑", "没跑", "没跑", "跑了", "跑了" },
+            {"王宝强", "跑了", "跑了", "跑了", "跑了", "跑了" },
+            {"郑恺", "跑了", "跑了", "跑了", "跑了", "跑了" }
     };
 
     public static void main(String[] args) throws Exception {
