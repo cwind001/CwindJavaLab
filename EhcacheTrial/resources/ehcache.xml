@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
+	updateCheck="false">
+	<!-- Default Cache Configuration, with name 'default' -->
+	<defaultCache maxElementsInMemory="50" eternal="false"
+		overflowToDisk="false" memoryStoreEvictionPolicy="LFU" />
+	<cache name="accountEhCache" maxElementsInMemory="50" eternal="false"
+		overflowToDisk="false" memoryStoreEvictionPolicy="LFU" />
+</ehcache>
