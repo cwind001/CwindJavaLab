@@ -1,0 +1,273 @@
+<voicepage classType="com.mstr.vpage.MenuVPage">
+	<lastUpdated>
+		<minutes>7</minutes>
+		<hours>17</hours>
+		<year>112</year>
+		<seconds>38</seconds>
+		<month>11</month>
+		<time>1356685658350</time>
+		<nanos>350000000</nanos>
+		<date>28</date>
+	</lastUpdated>
+	<noSpeechStrat>
+		<errors nullValue="true"></errors>
+		<type>noinput</type>
+		<prompts classType="com.mstr.util.map.MappableList" itemType="com.mstr.vpage.MultiPrompt">
+			<prompts_item>
+				<reprompt>true</reprompt>
+				<selected>false</selected>
+				<sequence>1</sequence>
+				<nestedPrompts classType="java.util.Vector" itemType="com.mstr.vpage.Prompt">
+					<nestedPrompts_item>
+						<playBackVXML nullValue="true"></playBackVXML>
+						<varID nullValue="true"></varID>
+						<message>I am sorry I did not hear you. Please say your choice
+							again.</message>
+						<selected>false</selected>
+						<sequence>1</sequence>
+						<audio>true</audio>
+						<moveFlag>0</moveFlag>
+						<playFullList>false</playFullList>
+						<responseVariable>false</responseVariable>
+						<externalAudio>false</externalAudio>
+						<audioFilename>/message/not_responding_1.wav</audioFilename>
+						<playAs nullValue="true"></playAs>
+					</nestedPrompts_item>
+				</nestedPrompts>
+				<moveFlag>0</moveFlag>
+			</prompts_item>
+			<prompts_item>
+				<reprompt>true</reprompt>
+				<selected>false</selected>
+				<sequence>2</sequence>
+				<nestedPrompts classType="java.util.Vector" itemType="com.mstr.vpage.Prompt">
+					<nestedPrompts_item>
+						<playBackVXML nullValue="true"></playBackVXML>
+						<varID nullValue="true"></varID>
+						<message>I am sorry I did not hear you. Please say your choice
+							again.</message>
+						<selected>false</selected>
+						<sequence>1</sequence>
+						<audio>true</audio>
+						<moveFlag>0</moveFlag>
+						<playFullList>false</playFullList>
+						<responseVariable>false</responseVariable>
+						<externalAudio>false</externalAudio>
+						<audioFilename>/message/not_responding_2.wav</audioFilename>
+						<playAs nullValue="true"></playAs>
+					</nestedPrompts_item>
+				</nestedPrompts>
+				<moveFlag>0</moveFlag>
+			</prompts_item>
+			<prompts_item>
+				<reprompt>true</reprompt>
+				<selected>false</selected>
+				<sequence>3</sequence>
+				<nestedPrompts classType="java.util.Vector" itemType="com.mstr.vpage.Prompt">
+					<nestedPrompts_item>
+						<playBackVXML nullValue="true"></playBackVXML>
+						<varID nullValue="true"></varID>
+						<message>I am sorry I did not hear you. Please say your choice
+							again.</message>
+						<selected>false</selected>
+						<sequence>1</sequence>
+						<audio>true</audio>
+						<moveFlag>0</moveFlag>
+						<playFullList>false</playFullList>
+						<responseVariable>false</responseVariable>
+						<externalAudio>false</externalAudio>
+						<audioFilename>/message/not_responding_3.wav</audioFilename>
+						<playAs nullValue="true"></playAs>
+					</nestedPrompts_item>
+				</nestedPrompts>
+				<moveFlag>0</moveFlag>
+			</prompts_item>
+		</prompts>
+		<finalAction classType="com.mstr.vpage.Destination">
+			<pageID></pageID>
+			<newPageType></newPageType>
+			<newPageTitle>No Input</newPageTitle>
+			<varRef>
+				<overridesProperty>false</overridesProperty>
+				<varID>0</varID>
+				<newVariableName nullValue="true"></newVariableName>
+			</varRef>
+			<domainCode>7f000001-02-13be0bd9949-01b4f42c-113</domainCode>
+			<pageCode></pageCode>
+		</finalAction>
+		<reprompt>true</reprompt>
+	</noSpeechStrat>
+	<action classType="com.mstr.vpage.LinkAction"></action>
+	<title>Greeting</title>
+	<content nullValue="true"></content>
+	<prompts classType="com.mstr.util.map.MappableList" itemType="com.mstr.vpage.Prompt">
+		<prompts_item>
+			<playBackVXML nullValue="true"></playBackVXML>
+			<varID></varID>
+			<message>Type your message here. Say record to customize with your
+				own voice.</message>
+			<selected>false</selected>
+			<sequence>1</sequence>
+			<audio>false</audio>
+			<moveFlag>0</moveFlag>
+			<playFullList>false</playFullList>
+			<responseVariable>false</responseVariable>
+			<externalAudio>false</externalAudio>
+			<audioFilename></audioFilename>
+			<playAs></playAs>
+		</prompts_item>
+	</prompts>
+	<questionResponseType nullValue="true"></questionResponseType>
+	<pageID>7f000001-03-13be0bd9ae0-01f30e9d-113</pageID>
+	<bargeIn>TRUE</bargeIn>
+	<subscriberID>0ac5328f-04-13850ec589e-23c6dc92-a06</subscriberID>
+	<changed>true</changed>
+	<ASRSettings>
+		<incompletetimeoutAtDefault>true</incompletetimeoutAtDefault>
+		<timeout>5</timeout>
+		<speedvsaccuracyAtDefault>true</speedvsaccuracyAtDefault>
+		<speedvsaccuracy>0.5</speedvsaccuracy>
+		<incompletetimeout>0.75</incompletetimeout>
+		<confidencelevelAtDefault>true</confidencelevelAtDefault>
+		<sensitivityAtDefault>true</sensitivityAtDefault>
+		<completetimeoutAtDefault>true</completetimeoutAtDefault>
+		<interdigittimeout>2.25</interdigittimeout>
+		<interdigittimeoutAtDefault>true</interdigittimeoutAtDefault>
+		<completetimeout>0.25</completetimeout>
+		<sensitivity>0.5</sensitivity>
+		<timeoutAtDefault>true</timeoutAtDefault>
+		<confidencelevel>0.45</confidencelevel>
+	</ASRSettings>
+	<selectedAction>linkType</selectedAction>
+	<autoGoto>false</autoGoto>
+	<pageType>com.mstr.vpage.MenuVPage</pageType>
+	<domainCode>7f000001-02-13be0bd9949-01b4f42c-113</domainCode>
+	<helpPrompts></helpPrompts>
+	<noInputPromptLevel>promptPageLevel</noInputPromptLevel>
+	<noMatchStrat>
+		<errors nullValue="true"></errors>
+		<type>nomatch</type>
+		<prompts classType="com.mstr.util.map.MappableList" itemType="com.mstr.vpage.MultiPrompt">
+			<prompts_item>
+				<reprompt>true</reprompt>
+				<selected>false</selected>
+				<sequence>1</sequence>
+				<nestedPrompts classType="java.util.Vector" itemType="com.mstr.vpage.Prompt">
+					<nestedPrompts_item>
+						<playBackVXML nullValue="true"></playBackVXML>
+						<varID nullValue="true"></varID>
+						<message>I am sorry I did not understand you. Please say your
+							choice again.</message>
+						<selected>false</selected>
+						<sequence>1</sequence>
+						<audio>true</audio>
+						<moveFlag>0</moveFlag>
+						<playFullList>false</playFullList>
+						<responseVariable>false</responseVariable>
+						<externalAudio>false</externalAudio>
+						<audioFilename>/message/not_understood_1.wav</audioFilename>
+						<playAs nullValue="true"></playAs>
+					</nestedPrompts_item>
+				</nestedPrompts>
+				<moveFlag>0</moveFlag>
+			</prompts_item>
+			<prompts_item>
+				<reprompt>true</reprompt>
+				<selected>false</selected>
+				<sequence>2</sequence>
+				<nestedPrompts classType="java.util.Vector" itemType="com.mstr.vpage.Prompt">
+					<nestedPrompts_item>
+						<playBackVXML nullValue="true"></playBackVXML>
+						<varID nullValue="true"></varID>
+						<message>I am sorry I did not understand you. Please say your
+							choice again.</message>
+						<selected>false</selected>
+						<sequence>1</sequence>
+						<audio>true</audio>
+						<moveFlag>0</moveFlag>
+						<playFullList>false</playFullList>
+						<responseVariable>false</responseVariable>
+						<externalAudio>false</externalAudio>
+						<audioFilename>/message/not_understood_2.wav</audioFilename>
+						<playAs nullValue="true"></playAs>
+					</nestedPrompts_item>
+				</nestedPrompts>
+				<moveFlag>0</moveFlag>
+			</prompts_item>
+			<prompts_item>
+				<reprompt>true</reprompt>
+				<selected>false</selected>
+				<sequence>3</sequence>
+				<nestedPrompts classType="java.util.Vector" itemType="com.mstr.vpage.Prompt">
+					<nestedPrompts_item>
+						<playBackVXML nullValue="true"></playBackVXML>
+						<varID nullValue="true"></varID>
+						<message>I am sorry I did not understand you. Please say your
+							choice again.</message>
+						<selected>false</selected>
+						<sequence>1</sequence>
+						<audio>true</audio>
+						<moveFlag>0</moveFlag>
+						<playFullList>false</playFullList>
+						<responseVariable>false</responseVariable>
+						<externalAudio>false</externalAudio>
+						<audioFilename>/message/not_understood_3.wav</audioFilename>
+						<playAs nullValue="true"></playAs>
+					</nestedPrompts_item>
+				</nestedPrompts>
+				<moveFlag>0</moveFlag>
+			</prompts_item>
+		</prompts>
+		<finalAction classType="com.mstr.vpage.Destination">
+			<pageID></pageID>
+			<newPageType></newPageType>
+			<newPageTitle>No Match</newPageTitle>
+			<varRef>
+				<overridesProperty>false</overridesProperty>
+				<varID>0</varID>
+				<newVariableName nullValue="true"></newVariableName>
+			</varRef>
+			<domainCode>7f000001-02-13be0bd9949-01b4f42c-113</domainCode>
+			<pageCode></pageCode>
+		</finalAction>
+		<reprompt>true</reprompt>
+	</noMatchStrat>
+	<globalCommands>
+		<home>true</home>
+		<checkMessages>true</checkMessages>
+		<goodbye>true</goodbye>
+		<back>true</back>
+		<record>true</record>
+		<repeat>true</repeat>
+	</globalCommands>
+	<disableSiteCommands>FALSE</disableSiteCommands>
+	<description></description>
+	<pageCode>1</pageCode>
+	<modification>0</modification>
+	<created nullValue="true"></created>
+	<noMatchPromptLevel>promptSiteLevel</noMatchPromptLevel>
+	<changedOutsideOfVoiceApp>false</changedOutsideOfVoiceApp>
+	<links classType="com.mstr.util.map.MappableList" itemType="com.mstr.vpage.Link">
+		<links_item>
+			<keywordsGrammar></keywordsGrammar>
+			<newPageType></newPageType>
+			<asrLang>English</asrLang>
+			<DTMF>1</DTMF>
+			<lastUpdated nullValue="true"></lastUpdated>
+			<pageCode></pageCode>
+			<DTMFsGrammar>(dtmf-1)</DTMFsGrammar>
+			<varRef>
+				<overridesProperty>false</overridesProperty>
+				<varID>0</varID>
+				<newVariableName></newVariableName>
+			</varRef>
+			<pageID></pageID>
+			<newPageTitle></newPageTitle>
+			<formattedKeywords></formattedKeywords>
+			<domainCode>7f000001-02-13be0bd9949-01b4f42c-113</domainCode>
+			<created nullValue="true"></created>
+		</links_item>
+	</links>
+	<timeConfirm>true</timeConfirm>
+	<pageComments></pageComments>
+</voicepage>

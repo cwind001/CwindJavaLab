@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<student id="10419">
+    <address>Paradise Building, HZ</address>
+    <birthday>
+        <birthday>Nov22,2012</birthday>
+    </birthday>
+    <email>wchen@angel.com</email>
+    <name>Billy Chen</name>
+</student>
