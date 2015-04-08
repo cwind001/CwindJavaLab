@@ -18,10 +18,10 @@ public class StudentJAXBTest {
 		stu1.setEmail("wchen@angel.com");
 		stu1.setId(10419);
 		stu1.setName("Billy Chen");
-//		stu1.setSport(new Basketball());
+		stu1.setSport(new Basketball());
 		try{
 			System.out.println("Orignal student: "+stu1.toString());
-//			stu1.getSport().printSport();
+			stu1.getSport().printSport();
 			File file = new File("StudentJAXBdatafile.xml");
 			JAXBContext jaxbContext = JAXBContext.newInstance(Student.class);
 			Marshaller jaxbMarshaller = jaxbContext.createMarshaller();

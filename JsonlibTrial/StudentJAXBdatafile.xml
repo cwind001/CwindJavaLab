@@ -6,4 +6,7 @@
     </birthday>
     <email>wchen@angel.com</email>
     <name>Billy Chen</name>
+    <sport>
+        <sportName>basketball</sportName>
+    </sport>
 </student>
