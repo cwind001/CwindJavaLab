@@ -15,6 +15,7 @@ public class ZigZagSequenceTest {
 			int cur = sequence[i];
 			for(int j=i;j<sequence.length;j++){
 				if(mask*(cur-sequence[j])>=0){
+					cur=sequence[j];
 					i=j;
 					continue;
 				}else{
@@ -39,6 +40,7 @@ public class ZigZagSequenceTest {
 				67, 669, 810, 704, 52, 861, 49, 640, 370, 908, 
 				477, 245, 413, 109, 659, 401, 483, 308, 609, 120, 
 				249, 22, 176, 279, 23, 22, 617, 462, 459, 244 };
+//		int[] seq = { 2, 3, 5, 4 };
 		System.out.println((new ZigZagSequenceTest()).longestZigZag(seq));
 	}
 }
