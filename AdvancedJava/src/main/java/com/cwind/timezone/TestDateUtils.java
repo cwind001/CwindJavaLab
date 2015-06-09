@@ -65,7 +65,9 @@ public class TestDateUtils {
 		TimeZone.setDefault(timeZone2);
 		calendar = Calendar.getInstance();
 		System.out.println(calendar.getTime());
-		System.out.println(calendar.getTime().getTime());
+		for(int i=0; i<48; i++){
+			System.out.println(calendar.getTime().getTime()-86400000*i);	
+		}
 		
 		System.out.println("Offset1: "+timeZone.getRawOffset()+ " Offset2: "+timeZone2.getRawOffset());
 	}
