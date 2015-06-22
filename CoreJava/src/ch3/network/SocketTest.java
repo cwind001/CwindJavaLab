@@ -16,7 +16,7 @@ public class SocketTest {
 
     public static void main(String[] args){
         try{
-            Socket s = new Socket("10.197.8.108", 8189);
+            Socket s = new Socket("127.0.0.1", 8189);
             try{
                 InputStream inStream = s.getInputStream();
                 Scanner in = new Scanner(inStream);
