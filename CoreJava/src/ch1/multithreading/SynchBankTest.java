@@ -1,12 +1,17 @@
 package ch1.multithreading;
 
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * Created by Administrator on 2015/6/20.
+ * Created with IntelliJ IDEA.
+ * User: Cwind
+ * Date: 2015/6/20
+ * Email: billchen01@163.com
  */
 
-public class UnsynchBankTest {
+public class SynchBankTest {
 
     public static void main(String[] args){
         Bank b = new Bank(NACCOUNTS, INITIAL_BALANCE);
@@ -32,23 +37,35 @@ class Bank {
         for(int i = 0; i < accounts.length; i++){
             accounts[i] = initialBalance;
         }
+        bankLock = new ReentrantLock();
+        sufficientFunds = bankLock.newCondition();
     }
 
-    public void transfer(int from, int to, double amount) {
-        if(accounts[from] < amount){
-            return;
+    public void transfer(int from, int to, double amount) throws InterruptedException {
+
+        bankLock.lock();
+        try{
+            if(accounts[from] < amount) sufficientFunds.await();
+            System.out.println(Thread.currentThread());
+            accounts[from] -= amount;
+            System.out.printf("%10.2f from %d to %d", amount, from, to);
+            accounts[to] += amount;
+            System.out.printf("Total Balance: %10.2f%n", getTotalBalance());
+            sufficientFunds.signalAll();
+        }finally {
+            bankLock.unlock();
         }
-        System.out.println(Thread.currentThread());
-        accounts[from] -= amount;
-        System.out.printf("%10.2f from %d to %d", amount, from, to);
-        accounts[to] += amount;
-        System.out.printf("Total Balance: %10.2f%n", getTotalBalance());
     }
 
     public double getTotalBalance(){
         double sum = 0;
-        for(double a : accounts){
-            sum += a;
+        bankLock.lock();
+        try{
+            for(double a : accounts){
+                sum += a;
+            }
+        }finally {
+            bankLock.unlock();
         }
         return sum;
     }
@@ -56,6 +73,9 @@ class Bank {
     public int size(){
         return accounts.length;
     }
+
+    private Lock bankLock;
+    private Condition sufficientFunds;
 }
 
 class TransferRunnable implements Runnable{
