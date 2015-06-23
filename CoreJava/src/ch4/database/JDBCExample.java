@@ -26,7 +26,7 @@ public class JDBCExample {
 
         Connection connection = null;
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/corejava", "root", "1234QWER");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/corejava", "javaer", "password");
         }catch (SQLException e){
             e.printStackTrace();
         }
