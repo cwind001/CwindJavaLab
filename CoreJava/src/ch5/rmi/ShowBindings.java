@@ -13,7 +13,7 @@ public class ShowBindings {
         try{
             Context namingContext = new InitialContext();
             NamingEnumeration<NameClassPair> e = namingContext.list("rmi://127.0.0.1:6600/");
-            while (e.hasMore()){
+            while (e.hasMore()) {
                 System.out.println(e.next().getName());
             }
         } catch (NamingException e) {
