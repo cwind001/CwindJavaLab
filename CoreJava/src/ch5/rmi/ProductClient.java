@@ -13,7 +13,7 @@ import javax.naming.Context;
 
 public class ProductClient {
     public static void main(String[] args){
-        System.setProperty("java.security.policy", "client.policy");
+        System.setProperty("java.security.policy", "E:\\SourceCodes\\GitHub\\BillyChen\\CwindJavaLab\\CoreJava\\src\\ch5\\rmi\\client.policy");
         System.setSecurityManager(new RMISecurityManager());
         String url = "rmi://127.0.0.1:6600/";
 
