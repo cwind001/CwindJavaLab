@@ -16,7 +16,7 @@ public class CodeLineCounter {
 		for(File file : files){
 			if(file.isDirectory()){
 				countCodeLine(file);
-			}else{
+			}else if(file.getName().endsWith(".java")){
 				BufferedReader br = null;
 				boolean bln = false;
 				try{
@@ -70,6 +70,10 @@ public class CodeLineCounter {
 		String springaop = "E:\\SourceCode\\Github\\References\\spring-framework\\spring-aop";
 		String ehcached3 = "E:\\SourceCode\\Github\\References\\ehcache3";
 		String netty = "E:\\SourceCode\\Github\\References\\netty";
+		
+		String designpatterns = "E:\\SourceCode\\Github\\java-design-patterns";
+		String cwindjavalab = "E:\\SourceCode\\Github\\CwindJavaLab";
+		String familybilling = "E:\\SourceCode\\LunaWorkspace\\FamilyBilling";
 		
 		File rootDir = new File(netty);
 		countCodeLine(rootDir);
