@@ -66,16 +66,18 @@ public class CodeLineCounter {
 	
 	
 	public static void main(String[] args){
-		String springcore = "E:\\SourceCode\\Github\\References\\spring-framework\\spring-core";
-		String springaop = "E:\\SourceCode\\Github\\References\\spring-framework\\spring-aop";
-		String ehcached3 = "E:\\SourceCode\\Github\\References\\ehcache3";
-		String netty = "E:\\SourceCode\\Github\\References\\netty";
+		String springcore = "..\\..\\References\\spring-framework\\spring-core";
+		String springaop = "..\\..\\References\\spring-framework\\spring-aop";
+		String ehcached3 = "..\\..\\References\\ehcache3";
+		String netty = "..\\..\\References\\netty";
+		String jetty = "..\\..\\References\\jetty.project";
 		
-		String designpatterns = "E:\\SourceCode\\Github\\java-design-patterns";
-		String cwindjavalab = "E:\\SourceCode\\Github\\CwindJavaLab";
-		String familybilling = "E:\\SourceCode\\LunaWorkspace\\FamilyBilling";
+		String designpatterns = "..\\..\\java-design-patterns";
+		String cwindjavalab = "..\\..\\CwindJavaLab";
+		String familybilling = "..\\..\\..\\LunaWorkspace\\FamilyBilling";
+		String devicemanager = "..\\..\\..\\LunaWorkspace\\DeviceManager";
 		
-		File rootDir = new File(netty);
+		File rootDir = new File(cwindjavalab);
 		countCodeLine(rootDir);
 
 		System.out.println("有效行数： "+normalLine);
