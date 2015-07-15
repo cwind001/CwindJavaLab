@@ -1,4 +1,4 @@
-package com.cwind.test;
+package com.cwind.collections;
 
 import java.util.ArrayList;
 import java.util.List;

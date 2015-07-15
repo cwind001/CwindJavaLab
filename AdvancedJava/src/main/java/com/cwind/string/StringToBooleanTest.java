@@ -1,4 +1,4 @@
-package com.cwind.test;
+package com.cwind.string;
 
 public class StringToBooleanTest {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.cwind.stock;
+package com.cwind.util;
 
 import java.io.BufferedInputStream;
 import java.io.InputStreamReader;
