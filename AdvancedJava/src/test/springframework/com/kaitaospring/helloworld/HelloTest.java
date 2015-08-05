@@ -53,4 +53,17 @@ public class HelloTest {
 		HelloApi hello4 = beanFactory.getBean("hello3", HelloApi.class);
 		hello4.sayHello();
 	}
+	
+	@Test
+	public void testConstructorDependencyInject() {
+		BeanFactory beanFactory = new ClassPathXmlApplicationContext("hellospring.xml");
+		HelloApi byIndex = beanFactory.getBean("byIndex", HelloApi.class);
+		byIndex.sayHello();
+		
+		HelloApi byType = beanFactory.getBean("byType", HelloApi.class);
+		byType.sayHello();
+		
+		HelloApi byName = beanFactory.getBean("byName", HelloApi.class);
+		byName.sayHello();
+	}
 }

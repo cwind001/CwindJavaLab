@@ -22,4 +22,19 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 	<bean id="hello3" factory-bean="instanceFactory" factory-method="getHelloImpl2">
 		<constructor-arg index="0" value="Hello instance factory!"></constructor-arg>
 	</bean>
+	
+	<bean id="byIndex" class="com.kaitaospring.helloworld.HelloImpl3">
+		<constructor-arg index="0" value="HelloImpl3!"></constructor-arg>
+		<constructor-arg index="1" value="1"/>
+	</bean>
+	
+	<bean id="byType" class="com.kaitaospring.helloworld.HelloImpl3">
+		<constructor-arg type="java.lang.String" value="HelloImpl3!"></constructor-arg>
+		<constructor-arg type="int" value="2"/>
+	</bean>
+	
+	<bean id="byName" class="com.kaitaospring.helloworld.HelloImpl3">
+		<constructor-arg name="message" value="HelloImpl3!"></constructor-arg>
+		<constructor-arg name="index" value="3"/>
+	</bean>
 </beans>
