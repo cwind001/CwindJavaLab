@@ -5,6 +5,10 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.locks.ReentrantLock;
 
+import com.cwind.multithreading.microblog.Author;
+import com.cwind.multithreading.microblog.MicroBlogTimeline;
+import com.cwind.multithreading.microblog.Update;
+
 public class TestMicroBlogTimeline {
 	public static void main(String[] args) {
 		final CountDownLatch firstLatch = new CountDownLatch(1);

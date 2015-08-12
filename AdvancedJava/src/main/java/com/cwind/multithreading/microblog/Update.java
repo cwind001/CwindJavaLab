@@ -1,4 +1,4 @@
-package com.cwind.concurrent;
+package com.cwind.multithreading.microblog;
 
 public class Update {
 	private final Author author;

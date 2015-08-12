@@ -1,4 +1,4 @@
-package com.cwind.concurrent;
+package com.cwind.multithreading.microblog;
 
 import java.util.Iterator;
 import java.util.concurrent.CopyOnWriteArrayList;
