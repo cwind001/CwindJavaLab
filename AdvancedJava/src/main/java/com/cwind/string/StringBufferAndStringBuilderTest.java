@@ -18,17 +18,21 @@ public class StringBufferAndStringBuilderTest {
 
     public static void main(String[] args){
         long startTime = System.currentTimeMillis();
+        String strToReverse = "####$$$$";
 
-        StringBuffer stringBuffer = new StringBuffer();
-        StringBuilder stringBuilder = new StringBuilder();
+        StringBuffer stringBuffer = new StringBuffer(strToReverse);
+        StringBuilder stringBuilder = new StringBuilder(strToReverse);
         CountDownLatch countDownLatch = new CountDownLatch(THREAD_NUM);
+        CountDownLatch countDownLatch2 = new CountDownLatch(THREAD_NUM);
 
         for(int i=0; i<THREAD_NUM; i++) {
-            new StringBufferTaskThread(stringBuffer, stringBuilder, countDownLatch).start();
+            new StringBufferTaskThread(stringBuilder, countDownLatch).start();
+            new StringBufferTaskThread(stringBuffer, countDownLatch2).start();
         }
 
         try {
             countDownLatch.await();
+            countDownLatch2.await();
             System.out.println("StringBuffer toString: " + stringBuffer.toString());
             System.out.println("StringBuilder toString: " + stringBuilder.toString());
             long endTime = System.currentTimeMillis();
@@ -42,14 +46,18 @@ class StringBufferTaskThread extends Thread {
     private static final String STARTER = "-start";
     private static final String ENDER = "-end";
 
-    private StringBuffer stringBuffer;
-    private StringBuilder stringBuilder;
+    private Object s = null;
     private CountDownLatch countDownLatch;  // 记载运行线程数
 
-    public StringBufferTaskThread(StringBuffer stringBuffer, StringBuilder stringBuilder, CountDownLatch countDownLatch) {
+    public StringBufferTaskThread(StringBuilder stringBuilder, CountDownLatch countDownLatch) {
         super();
-        this.stringBuffer = stringBuffer;
-        this.stringBuilder = stringBuilder;
+        this.s = stringBuilder;
+        this.countDownLatch = countDownLatch;
+    }
+
+    public StringBufferTaskThread(StringBuffer stringBuffer, CountDownLatch countDownLatch) {
+        super();
+        this.s = stringBuffer;
         this.countDownLatch = countDownLatch;
     }
 
@@ -57,15 +65,19 @@ class StringBufferTaskThread extends Thread {
     public void run() {
         System.out.println(Thread.currentThread().getName() + STARTER);
         for(int i=0; i<10; i++) {
-            if(i == 5){
-                try {
-                    Thread.sleep(200);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+            try {
+                Thread.sleep(200);
+                if(s instanceof StringBuffer){
+                    ((StringBuffer) s).reverse();
+                    System.out.println("Buffer->"+s.toString());
+                }else if(s instanceof StringBuilder){
+                    ((StringBuilder) s).reverse();
+                    System.out.println("Builder->"+s.toString());
                 }
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
-            stringBuilder.append(i);
-//            stringBuffer.append(i);
         }
         System.out.println(Thread.currentThread().getName() + ENDER);
         countDownLatch.countDown();
