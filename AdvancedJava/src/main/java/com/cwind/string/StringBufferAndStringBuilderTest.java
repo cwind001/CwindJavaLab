@@ -18,7 +18,7 @@ public class StringBufferAndStringBuilderTest {
 
     public static void main(String[] args){
         long startTime = System.currentTimeMillis();
-        String strToReverse = "####$$$$";
+        String strToReverse = "AAAABBBB";
 
         StringBuffer stringBuffer = new StringBuffer(strToReverse);
         StringBuilder stringBuilder = new StringBuilder(strToReverse);
