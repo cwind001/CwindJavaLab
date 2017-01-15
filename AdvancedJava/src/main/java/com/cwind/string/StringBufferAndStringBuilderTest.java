@@ -1,9 +1,5 @@
 package com.cwind.string;
 
-import junit.framework.Assert;
-import org.junit.Test;
-
-import java.util.Random;
 import java.util.concurrent.CountDownLatch;
 
 /**
